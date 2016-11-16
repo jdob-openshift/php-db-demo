@@ -1,5 +1,5 @@
-
 <html>
+
  <head>
   <title>Red Hat OpenShift</title>
   <style>
@@ -22,9 +22,10 @@
     
   </style>
  </head>
+
  <body>   
- <h1>Red Hat OpenShift - PHP & Database Demo</h1>
- <br>
+   <h1>Red Hat OpenShift - PHP & Database Demo</h1>
+   <br/>
 
 <?php
 error_reporting(E_ERROR);
@@ -85,8 +86,8 @@ if ($conn) {
 }
 ?>
 
-<br/><br/>
-<img src="powered-transparent-black.png" alt="Powered by OpenShift"> 
+    <br/><br/>
+    <img src="powered-transparent-black.png" alt="Powered by OpenShift"/>
 
- </body>
+  </body>
 </html>
