@@ -4,7 +4,7 @@
   <title>Red Hat OpenShift</title>
   <style>
     table, th, td {
-      border: 1px solid white;
+      border: 1px solid #111111;
       border-collapse: collapse;
     } 
     th, td {
@@ -12,18 +12,18 @@
       text-align: left;
     }
     h1 {
-        font-family: Arial,Verdana,sans-serif;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
     }
     body {
-        background-color: #dddddd;
-        color: #fff;
-        font-family: Arial,Verdana,sans-serif;
+        background-color: #eeeeee;
+        color: #222222;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
     }
     
   </style>
  </head>
  <body>   
- <h1>Deployed on Red Hat OpenShift</h1>
+ <h1>Red Hat OpenShift - PHP & Database Demo</h1>
  <br>
 
 <?php
@@ -47,8 +47,11 @@ if ($conn) {
   if (mysqli_query($conn, $sql)) {
     echo "Database initialized <br/>";
   } else {
+    echo "Database initialization skipped: ";
     echo mysqli_error($conn) . "<br/>";
   }
+
+  echo "<br/>";
 
   $containerip = $_SERVER['SERVER_ADDR'];
   $visitstamp = date("D M j G:i:s T Y");
@@ -60,6 +63,8 @@ if ($conn) {
   } else {
     echo "Error: " . $sql . " - " . mysqli_error($conn) . "<br/>";
   }
+
+  echo "<br/>";
 
   echo "<h3> Visitor Log </h3>";
   $sql = "SELECT id, containerip, visitstamp FROM visitors ORDER BY id DESC LIMIT 20";
@@ -79,8 +84,9 @@ if ($conn) {
   echo "Database is not available";
 }
 ?>
-<br>
-<img src="https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo.png" alt="Red Hat"> 
+
+<br/><br/>
+<img src="powered-transparent-black.png" alt="Powered by OpenShift"> 
 
  </body>
 </html>
