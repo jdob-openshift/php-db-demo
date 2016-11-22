@@ -24,7 +24,7 @@
  </head>
 
  <body>   
-   <h1>Red Hat OpenShift - PHP & Database Demo</h1>
+   <h1>Red Hat OpenShift on AWS Demo - PHP & Database Demo</h1>
    <br/>
 
 <?php
